@@ -1,0 +1,160 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: khaki;
+}
+
+.Analog-Clock {
+    width: 220px;
+    height: 220px;
+    border: 6px solid brown;
+    border-radius: 50%;
+    position: relative;
+    color: brown;
+    font-family: Arial, sans-serif;
+}
+
+.number {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.number-12 {
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number-3 {
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.number-6 {
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number-9 {
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.number-1 {
+    top: 25px;
+    right: 55px;
+}
+
+.number-2 {
+    top: 55px;
+    right: 25px;
+}
+
+.number-4 {
+    bottom: 55px;
+    right: 25px;
+}
+
+.number-5 {
+    bottom: 25px;
+    right: 55px;
+}
+
+.number-7 {
+    bottom: 25px;
+    left: 55px;
+}
+
+.number-8 {
+    bottom: 55px;
+    left: 25px;
+}
+
+.number-10 {
+    top: 55px;
+    left: 25px;
+}
+
+.number-11 {
+    top: 25px;
+    left: 55px;
+}
+
+.second {
+    width: 85px;
+    height: 3px;
+    background: rgb(223, 106, 106);
+    transform: translateY(-50%);
+    animation: rotateSecond 60s linear infinite;
+}
+
+.minute {
+    width: 70px;
+    height: 4px;
+    background: beige;
+    transform: translateY(-50%);
+    animation: rotateMinute 3600s linear infinite;
+}
+
+.hour {
+    width: 50px;
+    height: 5px;
+    background: brown;
+    transform: translateY(-50%);
+    animation: rotateHour 43200s linear infinite;
+}
+.Hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%;
+}
+.center {
+    width: 1.5vh;
+    height: 1.5vh;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+@keyframes rotateSecond {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateMinute {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateHour {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
